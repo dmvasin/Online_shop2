@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import vCatalog from "./V-catalog";
-import vCart from "./V-cart";
+import vCatalog from "./v-catalog";
+import vCart from "./v-cart";
 export default {
-  name: "V-main-wrapper",
+  name: "v-main-wrapper",
   components: {
     vCatalog,
     vCart

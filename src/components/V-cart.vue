@@ -4,16 +4,16 @@
 
 <script>
 export default {
-  name: 'V-cart',
+  name: "v-cart",
   components: {},
   props: {},
   data() {
-    return {}
+    return {};
   },
   mounted() {},
   beforeDestroy() {},
   methods: {}
-}
+};
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss"></style>
