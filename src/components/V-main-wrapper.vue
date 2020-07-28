@@ -13,12 +13,12 @@ export default {
   name: "v-main-wrapper",
   components: {
     vCatalog,
-    vCart
+    vCart,
   },
   props: {},
   data() {
     return {
-      title: "Main wrapper"
+      title: "Main wrapper",
     };
   },
   computed: {},
@@ -26,11 +26,11 @@ export default {
   watch: {},
   mounted() {
     console.log("Hello i am ufefgl");
-  }
+  },
 };
 </script>
 
-<style lang="scss">
+<style>
 .v-main-wrapper {
   max-width: 900px;
   margin: 0 auto;

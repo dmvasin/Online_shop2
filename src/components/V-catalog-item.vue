@@ -1,8 +1,13 @@
 <template>
   <div class="v-catalog-item">
-    <p>Item</p>
-    <p>Price: 100</p>
-    <button>Add to cart</button>
+    <img
+      class="v-catalog-item__image"
+      v-bind:src=" require('../assets/images' + product_data.image) "
+      alt="img"
+    />
+    <p class="v-catalog-item__name">{{product_data.name}}</p>
+    <p class="v-catalog-item__price">{{product_data.price}} P.</p>
+    <button class="v-catalog-item__add_to_cart_btn btn" @click="sendDataToParent">Add to cart</button>
   </div>
 </template>
 
@@ -10,13 +15,24 @@
 export default {
   name: "v-catalog-item",
   components: {},
-  props: {},
+  props: {
+    product_data: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+  },
   data() {
     return {};
   },
   mounted() {},
   beforeDestroy() {},
-  methods: {}
+  methods: {
+    sendDataToParent() {
+      this.$emit("sendArticle", this.product_data.article);
+    },
+  },
 };
 </script>
 
@@ -26,5 +42,8 @@ export default {
   box-shadow: 0 0 8px 0 #e0e0e0;
   padding: $padding * 2;
   margin-bottom: $margin * 2;
+  &__image {
+    width: 100;
+  }
 }
 </style>

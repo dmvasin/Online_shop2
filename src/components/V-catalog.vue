@@ -1,7 +1,14 @@
 <template>
   <div class="v-catalog">
     <h1>Catalog</h1>
-    <v-catalog-item />
+    <div class="v-catalog__list">
+      <v-catalog-item
+        v-for="product in products"
+        :key="product.article"
+        v-bind:product_data="product"
+        @sendArticle="showChildArticleInConsole"
+      />
+    </div>
   </div>
 </template>
 
@@ -10,7 +17,7 @@ import vCatalogItem from "./v-catalog-item";
 export default {
   name: "v-catalog",
   components: {
-    vCatalogItem
+    vCatalogItem,
   },
   props: {},
   data() {
@@ -22,7 +29,7 @@ export default {
           price: 2100.234234234,
           article: "T1",
           available: true,
-          category: "Мужские"
+          category: "Мужские",
         },
         {
           image: "2.jpg",
@@ -30,7 +37,7 @@ export default {
           price: 3150.12312412,
           article: "T2",
           available: true,
-          category: "Женские"
+          category: "Женские",
         },
         {
           image: "3.jpg",
@@ -38,7 +45,7 @@ export default {
           price: 4200.51524,
           article: "T3",
           available: false,
-          category: "Женские"
+          category: "Женские",
         },
         {
           image: "4.jpg",
@@ -46,7 +53,7 @@ export default {
           price: 5300.1245512,
           article: "T4",
           available: true,
-          category: "Мужские"
+          category: "Мужские",
         },
         {
           image: "5.jpg",
@@ -54,7 +61,7 @@ export default {
           price: 6500.3522314,
           article: "T5",
           available: false,
-          category: "Женские"
+          category: "Женские",
         },
         {
           image: "6.jpeg",
@@ -62,14 +69,18 @@ export default {
           price: 8700.4124123,
           article: "T6",
           available: true,
-          category: "Женские"
-        }
-      ]
+          category: "Женские",
+        },
+      ],
     };
   },
   mounted() {},
   beforeDestroy() {},
-  methods: {}
+  methods: {
+    showChildArticleInConsole(data) {
+      console.log(data);
+    },
+  },
 };
 </script>
 
