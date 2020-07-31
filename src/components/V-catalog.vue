@@ -26,7 +26,7 @@ export default {
         {
           image: "1.jpg",
           name: "T-shirt 1",
-          price: 2100.234234234,
+          price: 2100,
           article: "T1",
           available: true,
           category: "Мужские",
@@ -34,7 +34,7 @@ export default {
         {
           image: "2.jpg",
           name: "T-shirt 2",
-          price: 3150.12312412,
+          price: 3150,
           article: "T2",
           available: true,
           category: "Женские",
@@ -42,7 +42,7 @@ export default {
         {
           image: "3.jpg",
           name: "T-shirt 3",
-          price: 4200.51524,
+          price: 4200,
           article: "T3",
           available: false,
           category: "Женские",
@@ -50,7 +50,7 @@ export default {
         {
           image: "4.jpg",
           name: "T-shirt 4",
-          price: 5300.1245512,
+          price: 5300,
           article: "T4",
           available: true,
           category: "Мужские",
@@ -58,7 +58,7 @@ export default {
         {
           image: "5.jpg",
           name: "T-shirt 5",
-          price: 6500.3522314,
+          price: 6500,
           article: "T5",
           available: false,
           category: "Женские",
@@ -66,7 +66,7 @@ export default {
         {
           image: "6.jpeg",
           name: "T-shirt 6",
-          price: 8700.4124123,
+          price: 8700,
           article: "T6",
           available: true,
           category: "Женские",

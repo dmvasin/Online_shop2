@@ -43,7 +43,7 @@ export default {
   padding: $padding * 2;
   margin-bottom: $margin * 2;
   &__image {
-    width: 100;
+    width: 100px;
   }
 }
 </style>
