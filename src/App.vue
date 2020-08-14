@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <p>vuejs test</p>
     <v-main-wrapper />
   </div>
 </template>
@@ -10,8 +9,8 @@ import vMainWrapper from "./components/v-main-wrapper";
 export default {
   name: "App",
   components: {
-    vMainWrapper
-  }
+    vMainWrapper,
+  },
 };
 </script>
 

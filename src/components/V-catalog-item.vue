@@ -7,7 +7,7 @@
     />
     <p class="v-catalog-item__name">{{product_data.name}}</p>
     <p class="v-catalog-item__price">{{product_data.price}} P.</p>
-    <button class="v-catalog-item__add_to_cart_btn btn" @click="addToCart">Add to cart</button>
+    <button class="v-catalog-item__add_to_cart_btn btn" @click="addToCart">Добавить в корзину</button>
   </div>
 </template>
 
