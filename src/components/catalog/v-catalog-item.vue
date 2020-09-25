@@ -2,12 +2,14 @@
   <div class="v-catalog-item">
     <img
       class="v-catalog-item__image"
-      v-bind:src="require('../assets/images/' + product_data.image) "
+      v-bind:src="require('../../assets/images/' + product_data.image)"
       alt="img"
     />
-    <p class="v-catalog-item__name">{{product_data.name}}</p>
-    <p class="v-catalog-item__price">{{product_data.price}} P.</p>
-    <button class="v-catalog-item__add_to_cart_btn btn" @click="addToCart">Добавить в корзину</button>
+    <p class="v-catalog-item__name">{{ product_data.name }}</p>
+    <p class="v-catalog-item__price">{{ product_data.price }} P.</p>
+    <button class="v-catalog-item__add_to_cart_btn btn" @click="addToCart">
+      Добавить в корзину
+    </button>
   </div>
 </template>
 

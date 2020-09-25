@@ -2,18 +2,18 @@
   <div class="v-cart-item">
     <img
       class="v-cart-item__image"
-      :src="require('../assets/images/' + cart_item_data.image) "
+      :src="require('../../assets/images/' + cart_item_data.image)"
       alt="img"
     />
     <div class="v-cart-item__info">
-      <p>{{cart_item_data.name}}</p>
-      <p>{{cart_item_data.price}}</p>
-      <p>{{cart_item_data.article}}</p>
+      <p>{{ cart_item_data.name }}</p>
+      <p>{{ cart_item_data.price }}</p>
+      <p>{{ cart_item_data.article }}</p>
     </div>
     <div class="v-cart-item__quantity">
       <p>Количество:</p>
       <span class="quantity_btn" @click="decrementItem">-</span>
-      {{cart_item_data.quantity}}
+      {{ cart_item_data.quantity }}
       <span class="quantity_btn" @click="incrementItem">+</span>
     </div>
     <button @click="deleteFromCart">Delete</button>
