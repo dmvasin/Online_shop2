@@ -1,5 +1,7 @@
 <template>
   <div class="v-catalog">
+    <v-notification :messages="messages" />
+
     <router-link :to="{ name: 'cart', params: { cart_data: CART } }">
       <div class="v-catalog__link_to_cart">Корзина: {{ CART.length }}</div>
     </router-link>
@@ -51,11 +53,13 @@
 import vCatalogItem from "./v-catalog-item";
 import { mapActions, mapGetters } from "vuex";
 import vSelect from "../v-select";
+import vNotification from "../notifications/v-notification";
 export default {
   name: "v-catalog",
   components: {
     vCatalogItem,
     vSelect,
+    vNotification,
   },
   props: {},
   data() {
@@ -69,6 +73,7 @@ export default {
       sortedProducts: [],
       minPrice: 0,
       maxPrice: 1000,
+      messages: [],
     };
   },
 
@@ -109,7 +114,14 @@ export default {
       }
     },
     addToCart(data) {
-      this.ADD_TO_CART(data);
+      this.ADD_TO_CART(data).then(() => {
+        let timeStamp = Date.now().toLocaleString();
+        this.messages.unshift({
+          name: "Товар добавлен в корзину",
+          icon: "check_circle",
+          id: timeStamp,
+        });
+      });
     },
   },
   mounted() {

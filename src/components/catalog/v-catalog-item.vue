@@ -1,5 +1,7 @@
 <template>
   <div class="v-catalog-item">
+    <v-popup />
+
     <img
       class="v-catalog-item__image"
       v-bind:src="require('../../assets/images/' + product_data.image)"
@@ -7,6 +9,9 @@
     />
     <p class="v-catalog-item__name">{{ product_data.name }}</p>
     <p class="v-catalog-item__price">{{ product_data.price }} P.</p>
+    <button class="v-catalog-iten__show-info" @click="showPoputInfo">
+      Show info
+    </button>
     <button class="v-catalog-item__add_to_cart_btn btn" @click="addToCart">
       Добавить в корзину
     </button>
@@ -14,9 +19,13 @@
 </template>
 
 <script>
+import vPopup from "../popup/v-popup";
+
 export default {
   name: "v-catalog-item",
-  components: {},
+  components: {
+    vPopup,
+  },
   props: {
     product_data: {
       type: Object,
@@ -31,6 +40,7 @@ export default {
   mounted() {},
   beforeDestroy() {},
   methods: {
+    showPoputInfo() {},
     addToCart() {
       this.$emit("addToCart", this.product_data);
     },
